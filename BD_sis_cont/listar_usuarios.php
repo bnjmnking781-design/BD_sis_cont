@@ -4,7 +4,7 @@ require_once 'conexion.php';
 $ok    = $_GET['ok']    ?? null;
 $error = $_GET['error'] ?? null;
 
-// Ajusta los campos a tu tabla real:
+
 $sql = "SELECT id, nombre, usuario, correo FROM usuarios ORDER BY id DESC";
 $res = $conn->query($sql);
 if (!$res) {
@@ -16,7 +16,7 @@ if (!$res) {
 <head>
   <meta charset="UTF-8">
   <title>Usuarios</title>
-  <link rel="stylesheet" href="css/estilo.css"><!--archivo CSS actual -->
+  <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 
@@ -59,3 +59,4 @@ if (!$res) {
 <p><a href="dashboard.php">⬅ Volver al panel</a></p>
 </body>
 </html>
+
