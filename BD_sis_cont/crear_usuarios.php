@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mensaje = "Faltan datos obligatorios.";
   } else {
     $password = password_hash($password_plano, PASSWORD_DEFAULT);
-    // Ajusta columnas según tu tabla (nombre, usuario, correo/email, password, rol)
+    // Ajusta columnas según la tabla 
     $stmt = $conn->prepare("INSERT INTO usuarios (nombre, usuario, correo, password, rol) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $nombre, $usuario, $email, $password, $rol);
     if ($stmt->execute()) { header("Location: listar_usuarios.php?ok=1"); exit; }
@@ -54,3 +54,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
   </form>
 </body>
 </html>
+
