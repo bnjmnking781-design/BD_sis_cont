@@ -1,4 +1,4 @@
-# Sistema Contable — GA7 (BD_sis_cont)
+# Sistema Contable — (BD_sis_cont)
 
 Proyecto en **PHP + MySQL** con CRUD de **Usuarios** y **Movimientos**, un **Dashboard** y **API JSON** para pruebas en Postman.
 
